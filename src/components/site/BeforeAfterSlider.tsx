@@ -44,7 +44,7 @@ export function BeforeAfterSlider({
         dragging.current = true;
         setFromClientX(e.clientX);
       }}
-      className="group relative aspect-[3/2] w-full cursor-ew-resize touch-none overflow-hidden rounded-sm bg-muted select-none"
+      className="group relative aspect-[3/2] w-full cursor-ew-resize touch-none overflow-hidden rounded-sm bg-muted select-none @container"
     >
       <img
         src={after}
@@ -61,8 +61,7 @@ export function BeforeAfterSlider({
           loading="lazy"
           width={1200}
           height={800}
-          className="h-full w-full object-cover"
-          style={{ width: ref.current?.clientWidth ? `${ref.current.clientWidth}px` : "100%" }}
+          className="h-full w-[100cqw] max-w-none object-cover"
         />
       </div>
 
